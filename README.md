@@ -7,8 +7,8 @@ This is repository for our recent paper DREAM: Improving Situational QA by First
 
 
 ## DREAM Model:
-Our T5-11B model is available in HuggingFace PyTorch format in Google Cloud storage at:
-https://console.cloud.google.com/storage/browser/...
+Our T5-11B model is available in HuggingFace PyTorch format at:
+https://beaker.org/ds/01FMN19KY0SZQQHAG1JECDFVH4
 
 For additional instructions about using these models and sample commands please refer to https://github.com/allenai/entailment_bank/blob/main/README_models.md
 
