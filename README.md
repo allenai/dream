@@ -1,6 +1,6 @@
 # DREAM
 
-This is repository for our recent paper DREAM: Improving Situational QA by First Elaborating the Situation, EMNLP 2022 (https://arxiv.org/abs/2112.08656)
+This is repository for our recent paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (https://arxiv.org/abs/2112.08656)
 
 ## Dataset Creation:
 
