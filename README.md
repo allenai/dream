@@ -15,10 +15,10 @@ For additional instructions about using these models and sample commands please 
 
 # Citation
 ```
-@article{dreamemnlp2022,
+@article{dreamnaacl2022,
   title={DREAM: Improving Situational QA by First Elaborating the Situation},
-  author={Gu, Yuling Gu and Dalvi Mishra, Bhavana, and Clark, Peter},
-  journal={EMNLP},
+  author={Gu, Yuling and Dalvi Mishra, Bhavana, and Clark, Peter},
+  journal={NAACL},
   year={2022}
 }
 ```
