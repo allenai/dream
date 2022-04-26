@@ -5,10 +5,11 @@ This is repository for our recent paper DREAM: Improving Situational QA by First
 ## Dataset Creation:
 The script for Scene Elaboration (SE) dataset creation is provided in two formats. 
 
-For the script in Jupyter Notebbook format (.ipynb), follow the instructions in the Markdown to download the source data and run each cell in the notebook.
+For the script in Jupyter Notebook format (.ipynb), follow the instructions in the Markdown to download the source data and run each cell in the notebook.
+You should end up with the same 3 subdirectories in your "External_data" folder as in the instructions below.
 
 
-For the python script, when running the script, first create a folder in the same directory named "External_data/", and download the source data:
+For the python script (.py), when running the script, first create a folder in the same directory named "External_data/", and download the source data:
 
 Instructions to download the Social Chemistry dataset:
 1. Visit the website for the Social Chemistry project https://maxwellforbes.com/social-chemistry/ 
@@ -25,7 +26,18 @@ Instructions to download the Moral Stories dataset :
 2. "Download" the compressed file from the link above 
 3. Expand the downloaded file and place it in "External_data" folder we created
 
-After downloading these, run the script as "python3 1_Use_external_data_sets_for_distant_supervision_DREAM.py"
+After downloading these, in your "External_data" folder, you should have the following 3 subdirectories:
+
+moral_stories_datasets
+
+social-chem-101
+
+storycommonsense_data
+
+Run the script as 
+```
+python3 1_Use_external_data_sets_for_distant_supervision_DREAM.py
+```
 
 
 
