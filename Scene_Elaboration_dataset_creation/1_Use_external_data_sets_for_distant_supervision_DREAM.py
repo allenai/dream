@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[1]:
 
 
 import json
@@ -10,7 +10,7 @@ import os
 import random
 
 
-# In[7]:
+# In[2]:
 
 
 def make_sure_dir_exists(dir_to_check):
@@ -18,7 +18,7 @@ def make_sure_dir_exists(dir_to_check):
         os.makedirs(dir_to_check)
 
 
-# In[ ]:
+# In[3]:
 
 
 # !rm -r External_data/
@@ -26,15 +26,15 @@ def make_sure_dir_exists(dir_to_check):
 # !rm -r External_data_tidied_combined_used_to_train_DREAM/
 
 
-# In[3]:
+# In[4]:
 
 
 # We will store the orginal external datasets in a folder named "External_data"
-get_ipython().system('mkdir External_data')
+make_sure_dir_exists("External_data/")
 
 # We will store the extracted information from external datasets that we use 
 # to build our Scene Elaboration (SE) dataset in a folder named "External_data_tidied"
-get_ipython().system('mkdir External_data_tidied')
+make_sure_dir_exists("External_data_tidied/")
 
 
 # ## External dataset: Social Chemistry
@@ -48,7 +48,7 @@ get_ipython().system('mkdir External_data_tidied')
 # 
 # 
 
-# In[19]:
+# In[7]:
 
 
 def organize_data_sc_as_rot():
@@ -122,7 +122,7 @@ def organize_data_sc_as_rot():
         #print("judgement_types:", judgment_types)
 
 
-# In[20]:
+# In[8]:
 
 
 '''
@@ -150,6 +150,50 @@ organize_data_sc_as_rot()
 # 
 
 # In[11]:
+
+
+# map Objective Pronouns & Possessive Pronouns to Nominatve 
+# ["i", "you" , "he", "she", "we", "they"]
+def get_nominative_pronoun(pron):
+    i_list = ["me", "my", "mine"]
+    you_list = ["your", "yours"]
+    he_list = ["him", "his"]
+    she_list = ["her", "hers" ]
+    we_list = ["us", "our", "ours"]
+    they_list = ["them", "their", "theirs"]
+    to_change = i_list + you_list + he_list + she_list + we_list + they_list
+    if pron.lower() not in to_change:
+        return pron
+    
+    if pron.lower() in i_list:
+        return "I"
+    elif pron.lower() in you_list:
+        return "you"
+    elif pron.lower() in he_list:
+        return "he"
+    elif pron.lower() in she_list:
+        return "she"
+    elif pron.lower() in we_list:
+        return "we"
+    elif pron.lower() in they_list:
+        return "they"
+
+# my, our, his, her, their, your 
+def get_possessive_form_from_nom(entity):
+    nom_poss = {"i":"my", "you":"your", "he":"his", "she":"her", "we":"our", "they":"their"}
+
+    if entity.lower() in nom_poss:
+        return nom_poss[entity.lower()]
+    if entity.endswith("s"):
+        return entity + "'"
+    return entity + "'s"
+
+def get_possessive_form(entity):
+    possessive_entity = get_possessive_form_from_nom(get_nominative_pronoun(entity))
+    return possessive_entity
+
+
+# In[12]:
 
 
 def organize_data_story_commonsense(train_dev_test, scene_part):
@@ -210,7 +254,7 @@ def organize_data_story_commonsense(train_dev_test, scene_part):
         print("Total :", id_cnt - 1)
 
 
-# In[12]:
+# In[13]:
 
 
 '''
@@ -242,7 +286,7 @@ for train_dev_test in ["training", "dev", "test"]:
 # 3. Expand the downloaded file and place it in "External_data" folder we created
 # 
 
-# In[15]:
+# In[14]:
 
 
 def organize_data_moral_stories(scene_part, train_dev_test):
@@ -294,7 +338,7 @@ def organize_data_moral_stories(scene_part, train_dev_test):
         print("Total :", id_cnt - 1)
 
 
-# In[16]:
+# In[15]:
 
 
 '''
@@ -317,7 +361,7 @@ for train_dev_test in ["training", "dev", "test"]:
 # 
 # Combine the sampled scene components into one folder (with training/dev/test files).
 
-# In[21]:
+# In[16]:
 
 
 outdir = "External_data_tidied_combined_used_to_train_DREAM/"
@@ -398,7 +442,7 @@ for file_name in file_names:
 print("THIS DATASET HAS A TOTAL OF", global_final_new_data, "LINES!")
 
 
-# In[ ]:
+# In[17]:
 
 
 '''
