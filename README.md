@@ -3,7 +3,7 @@
 This is repository for our recent paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (https://arxiv.org/abs/2112.08656)
 
 ## Dataset Creation:
-The script to create Scene Elaboration (SE) dataset from existing commonsense resources is provided in two formats. 
+The script to compile Scene Elaboration (SE) dataset from existing commonsense resources is provided in two formats. 
 
 (1) For the script in Jupyter Notebook format (.ipynb), follow the instructions in the Markdown to download the source data and run each cell in the notebook.
 You should end up with the same 3 subdirectories in your "External_data" folder as in the instructions below.
