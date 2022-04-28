@@ -46,7 +46,7 @@ python3 1_Use_external_data_sets_for_distant_supervision_DREAM.py
 Our T5-11B model is available in HuggingFace PyTorch format at:
 https://beaker.org/ds/01FMN19KY0SZQQHAG1JECDFVH4
 
-For additional instructions about using these models and sample commands please refer to https://github.com/allenai/entailment_bank/blob/main/README_models.md
+For additional instructions about using the DREAM model and sample commands, please refer to https://github.com/allenai/dream/blob/main/DREAM_model_instructions/README_DREAM_model.md.
 
 
 # Citation
