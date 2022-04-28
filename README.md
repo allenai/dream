@@ -39,7 +39,7 @@ Run the script as (we have used python v3.7 during development)
 python data/compile_scene_elaboration_dataset.py
 ```
 
-This script will compile Scene Elaboration dataset in folder: 
+This script will compile Scene Elaboration dataset in the following folder: 
 ```
 external_data_tidied_combined_used_to_train_DREAM
 ```
