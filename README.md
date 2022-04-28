@@ -34,7 +34,7 @@ social-chem-101
 storycommonsense_data
 ```
 
-Run the script as 
+Run the script as (we have used python v3.7 during development)
 ```
 python data/compile_scene_elaboration_dataset.py
 ```
