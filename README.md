@@ -36,11 +36,10 @@ storycommonsense_data
 
 Run the script as 
 ```
-python3 1_Use_external_data_sets_for_distant_supervision_DREAM.py
+python data/compile_scene_elaboration_dataset.py
 ```
 
-
-
+This script will compile Scene Elaboration dataset in folder: external_data_tidied_combined_used_to_train_DREAM
 
 ## DREAM Model:
 Our T5-11B model is available in HuggingFace PyTorch format at:
