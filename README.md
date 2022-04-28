@@ -6,28 +6,28 @@ This is repository for our recent paper DREAM: Improving Situational QA by First
 The script to compile Scene Elaboration (SE) dataset from existing commonsense resources is provided in two formats. 
 
 (1) For the script in Jupyter Notebook format (.ipynb), follow the instructions in the Markdown to download the source data and run each cell in the notebook.
-You should end up with the same 3 subdirectories in your "External_data" folder as in the instructions below.
+You should end up with the same 3 subdirectories in your "external_data" folder as in the instructions below.
 
 
-(2) For the python script (.py), when running the script, first create a folder in the same directory named "External_data/", and download the source data:
+(2) For the python script (.py), when running the script, first create a folder in the same directory named "external_data/", and download the source data:
 
 ```Instructions to download the Social Chemistry dataset:
 1. Visit the website for the Social Chemistry project https://maxwellforbes.com/social-chemistry/ 
 2. Scroll down to the "QUICK INFO" part, find the third column "DATA", "Social-Chem-101 Dataset 4.5M+ annotations 28 MB .zip" to "DOWNLOAD" the source data
-3. Unzip the downloaded file and place it in "External_data" folder we created
+3. Unzip the downloaded file and place it in "external_data" folder we created
 
 Instructions to download the Story Commonsense dataset :
 1. Visit the website for the Story Commonsense project https://uwnlp.github.io/storycommonsense/
 2. At the top of the page, where the "Quick links" are, click "[download the data]"
-3. Unzip the downloaded file and place it in "External_data" folder we created
+3. Unzip the downloaded file and place it in "external_data" folder we created
 
 Instructions to download the Moral Stories dataset :
 1. The Moral Stories dataset is available at https://tinyurl.com/moral-stories-data
 2. "Download" the compressed file from the link above 
-3. Expand the downloaded file and place it in "External_data" folder we created
+3. Expand the downloaded file and place it in "external_data" folder we created
 ```
 
-After downloading these, in your "External_data" folder, you should have the following 3 subdirectories:
+After downloading these, in your "external_data" folder, you should have the following 3 subdirectories:
 ```
 moral_stories_datasets
 social-chem-101

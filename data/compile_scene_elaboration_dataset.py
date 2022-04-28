@@ -21,30 +21,30 @@ def make_sure_dir_exists(dir_to_check):
 # In[3]:
 
 
-# !rm -r External_data/
-# !rm -r External_data_tidied/
-# !rm -r External_data_tidied_combined_used_to_train_DREAM/
+# !rm -r external_data/
+# !rm -r external_data_tidied/
+# !rm -r external_data_tidied_combined_used_to_train_DREAM/
 
 
 # In[4]:
 
 
-# We will store the orginal external datasets in a folder named "External_data"
-make_sure_dir_exists("External_data/")
+# We will store the orginal external datasets in a folder named "external_data"
+make_sure_dir_exists("external_data/")
 
 # We will store the extracted information from external datasets that we use 
-# to build our Scene Elaboration (SE) dataset in a folder named "External_data_tidied"
-make_sure_dir_exists("External_data_tidied/")
+# to build our Scene Elaboration (SE) dataset in a folder named "external_data_tidied"
+make_sure_dir_exists("external_data_tidied/")
 
 
 # ## External dataset: Social Chemistry
-# To get rule of thumbs (ROT component of SE) in External_data_tidied/
+# To get rule of thumbs (ROT component of SE) in external_data_tidied/
 # 
 
 # Download the source dataset :
 # 1. Visit the website for the Social Chemistry project https://maxwellforbes.com/social-chemistry/ 
 # 2. Scroll down to the "QUICK INFO" part, find the third column "DATA", "Social-Chem-101 Dataset 4.5M+ annotations 28 MB .zip" to "DOWNLOAD" the source data
-# 3. Unzip the downloaded file and place it in "External_data" folder we created
+# 3. Unzip the downloaded file and place it in "external_data" folder we created
 # 
 # 
 
@@ -53,7 +53,7 @@ make_sure_dir_exists("External_data_tidied/")
 
 def organize_data_sc_as_rot():
     dataset = "social_chemistry"
-    out_dir = "External_data_tidied"
+    out_dir = "external_data_tidied"
     scene_part = "rot" # what might other people say
     out_paths = []
     for train_dev_test in ["training", "dev", "test"]:
@@ -61,7 +61,7 @@ def organize_data_sc_as_rot():
         out_paths.append(out_path)
         make_sure_dir_exists("/".join([out_dir, scene_part]))
     
-    infile = "External_data/social-chem-101/social-chem-101.v1.0.tsv"
+    infile = "external_data/social-chem-101/social-chem-101.v1.0.tsv"
 
     judgment_types = []
     with open(infile, "r") as datafile,         open(out_paths[0], "w") as json_train, open(out_paths[1], "w") as json_dev,         open(out_paths[2], "w") as json_test :
@@ -138,14 +138,14 @@ organize_data_sc_as_rot()
 
 
 # ## External dataset: Story Commonsense
-# To get Motivation, Emotion in External_data_tidied/
+# To get Motivation, Emotion in external_data_tidied/
 # 
 # 
 
 # Download the source dataset :
 # 1. Visit the website for the Story Commonsense project https://uwnlp.github.io/storycommonsense/
 # 2. At the top of the page, where the "Quick links" are, click "[download the data]"
-# 3. Unzip the downloaded file and place it in "External_data" folder we created
+# 3. Unzip the downloaded file and place it in "external_data" folder we created
 # 
 # 
 
@@ -203,17 +203,17 @@ def organize_data_story_commonsense(train_dev_test, scene_part):
     scene_part : "emotion", "motivation"
     '''
     dataset = "story_commonsense"
-    out_dir = "External_data_tidied"
+    out_dir = "external_data_tidied"
     out_path = "/".join([out_dir, scene_part,train_dev_test]) + ".json"
     make_sure_dir_exists("/".join([out_dir, scene_part]))
     
     if train_dev_test == "training":
-        infile = "External_data/storycommonsense_data/csv_version/" + train_dev_test + "/allcharlinepairs.csv"
+        infile = "external_data/storycommonsense_data/csv_version/" + train_dev_test + "/allcharlinepairs.csv"
     else:
         if scene_part == "emotion":
-            infile = "External_data/storycommonsense_data/csv_version/" + train_dev_test + "/" + scene_part + "/allcharlinepairs.csv"
+            infile = "external_data/storycommonsense_data/csv_version/" + train_dev_test + "/" + scene_part + "/allcharlinepairs.csv"
         elif scene_part == "motivation":
-            infile = "External_data/storycommonsense_data/csv_version/" + train_dev_test + "/motiv/allcharlinepairs.csv"
+            infile = "external_data/storycommonsense_data/csv_version/" + train_dev_test + "/motiv/allcharlinepairs.csv"
 
 
     with open(infile, "r") as datafile,         open(out_path, "w") as json_file:
@@ -278,12 +278,12 @@ for train_dev_test in ["training", "dev", "test"]:
 
 
 # ## External dataset: Moral Stories
-# To get moral, immoral_consequences in External_data_tidied/
+# To get moral, immoral_consequences in external_data_tidied/
 
 # Download the source dataset :
 # 1. The Moral Stories dataset is available at https://tinyurl.com/moral-stories-data
 # 2. "Download" the compressed file from the link above 
-# 3. Expand the downloaded file and place it in "External_data" folder we created
+# 3. Expand the downloaded file and place it in "external_data" folder we created
 # 
 
 # In[14]:
@@ -297,14 +297,14 @@ def organize_data_moral_stories(scene_part, train_dev_test):
     '''
     dataset = "moral_stories"
     
-    out_dir = "External_data_tidied"
+    out_dir = "external_data_tidied"
     out_path = "/".join([out_dir, scene_part , train_dev_test]) + ".json"
     make_sure_dir_exists("/".join([out_dir, scene_part]))
     
     if train_dev_test == "training":
-        infile = "External_data/" + dataset + "_datasets/generation/consequence|action+context/norm_distance/train.jsonl"
+        infile = "external_data/" + dataset + "_datasets/generation/consequence|action+context/norm_distance/train.jsonl"
     else:
-        infile = "External_data/" + dataset + "_datasets/generation/consequence|action+context/norm_distance/" + train_dev_test + ".jsonl"
+        infile = "external_data/" + dataset + "_datasets/generation/consequence|action+context/norm_distance/" + train_dev_test + ".jsonl"
 
     with open(infile, "r") as datafile, open(out_path, "w") as json_file :
 
@@ -364,7 +364,7 @@ for train_dev_test in ["training", "dev", "test"]:
 # In[16]:
 
 
-outdir = "External_data_tidied_combined_used_to_train_DREAM/"
+outdir = "external_data_tidied_combined_used_to_train_DREAM/"
 make_sure_dir_exists(outdir)
 
 file_names = ["training.json", "dev.json", "test.json"]
@@ -373,12 +373,12 @@ global_final_new_data = 0
 for file_name in file_names:
     print(file_name)
     with open(outdir + file_name, "w") as outfile:
-        for folder in os.listdir("External_data_tidied/"):
+        for folder in os.listdir("external_data_tidied/"):
 
-            if os.path.isfile("External_data_tidied/" + folder):
+            if os.path.isfile("external_data_tidied/" + folder):
                 continue # we want to copy from data folders, skip README file etc
             print("=" * 10, "Copying data from", folder, "subfolder...", "=" * 10)
-            with open("External_data_tidied/" + folder + "/" + file_name , 'r') as infile:
+            with open("external_data_tidied/" + folder + "/" + file_name , 'r') as infile:
                 
                 # read all lines from file
                 infile_lines = infile.readlines()
@@ -434,7 +434,7 @@ for file_name in file_names:
                     assert written_to_file_cnt == len(sampled_line_nums)
                     
             global_final_new_data += written_to_file_cnt
-            print("External_data_tidied/" + folder + "/" + file_name, "copied!", "Copied", written_to_file_cnt, "lines.")
+            print("external_data_tidied/" + folder + "/" + file_name, "copied!", "Copied", written_to_file_cnt, "lines.")
             
             
 
@@ -450,60 +450,60 @@ You'd expect the following output from running the above lines:
 training.json
 ========== Copying data from rot subfolder... ==========
 Original total size 233501
-External_data_tidied/rot/training.json copied! Copied 23350 lines.
+external_data_tidied/rot/training.json copied! Copied 23350 lines.
 ========== Copying data from consequence subfolder... ==========
 Original total size 20000
-External_data_tidied/consequence/training.json copied! Copied 20000 lines.
+external_data_tidied/consequence/training.json copied! Copied 20000 lines.
 ========== Copying data from emotion subfolder... ==========
 Original total size 174691
 non-empty sampled 15722
 empty sampled 1746
 total sampled 17468
-External_data_tidied/emotion/training.json copied! Copied 17468 lines.
+external_data_tidied/emotion/training.json copied! Copied 17468 lines.
 ========== Copying data from motivation subfolder... ==========
 Original total size 174691
 non-empty sampled 15722
 empty sampled 1746
 total sampled 17468
-External_data_tidied/motivation/training.json copied! Copied 17468 lines.
+external_data_tidied/motivation/training.json copied! Copied 17468 lines.
 dev.json
 ========== Copying data from rot subfolder... ==========
 Original total size 29234
-External_data_tidied/rot/dev.json copied! Copied 2923 lines.
+external_data_tidied/rot/dev.json copied! Copied 2923 lines.
 ========== Copying data from consequence subfolder... ==========
 Original total size 2000
-External_data_tidied/consequence/dev.json copied! Copied 2000 lines.
+external_data_tidied/consequence/dev.json copied! Copied 2000 lines.
 ========== Copying data from emotion subfolder... ==========
 Original total size 53234
 non-empty sampled 4791
 empty sampled 532
 total sampled 5323
-External_data_tidied/emotion/dev.json copied! Copied 5323 lines.
+external_data_tidied/emotion/dev.json copied! Copied 5323 lines.
 ========== Copying data from motivation subfolder... ==========
 Original total size 47547
 non-empty sampled 4279
 empty sampled 475
 total sampled 4754
-External_data_tidied/motivation/dev.json copied! Copied 4754 lines.
+external_data_tidied/motivation/dev.json copied! Copied 4754 lines.
 test.json
 ========== Copying data from rot subfolder... ==========
 Original total size 93187
-External_data_tidied/rot/test.json copied! Copied 9318 lines.
+external_data_tidied/rot/test.json copied! Copied 9318 lines.
 ========== Copying data from consequence subfolder... ==========
 Original total size 2000
-External_data_tidied/consequence/test.json copied! Copied 2000 lines.
+external_data_tidied/consequence/test.json copied! Copied 2000 lines.
 ========== Copying data from emotion subfolder... ==========
 Original total size 51891
 non-empty sampled 4670
 empty sampled 518
 total sampled 5188
-External_data_tidied/emotion/test.json copied! Copied 5188 lines.
+external_data_tidied/emotion/test.json copied! Copied 5188 lines.
 ========== Copying data from motivation subfolder... ==========
 Original total size 39359
 non-empty sampled 3542
 empty sampled 393
 total sampled 3935
-External_data_tidied/motivation/test.json copied! Copied 3935 lines.
+external_data_tidied/motivation/test.json copied! Copied 3935 lines.
 THIS DATASET HAS A TOTAL OF 113727 LINES!
 
 '''
