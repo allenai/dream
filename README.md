@@ -11,7 +11,8 @@ You should end up with the same 3 subdirectories in your "external_data" folder 
 
 (2) For the python script (.py), when running the script, first create a folder in the same directory named "external_data/", and download the source data:
 
-```Instructions to download the Social Chemistry dataset:
+```
+Instructions to download the Social Chemistry dataset:
 1. Visit the website for the Social Chemistry project https://maxwellforbes.com/social-chemistry/ 
 2. Scroll down to the "QUICK INFO" part, find the third column "DATA", "Social-Chem-101 Dataset 4.5M+ annotations 28 MB .zip" to "DOWNLOAD" the source data
 3. Unzip the downloaded file and place it in "external_data" folder we created
