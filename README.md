@@ -1,6 +1,6 @@
 # DREAM
 
-This repository provides access to the data and model used in our recent paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (https://arxiv.org/abs/2112.08656)
+This repository provides access to the data and model used in our recent paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/)
 
 ## Dataset Creation:
 The script to compile Scene Elaboration (SE) dataset from existing commonsense resources is provided in two formats. 
@@ -54,11 +54,19 @@ For additional instructions about using the DREAM model and sample commands, ple
 
 # Citation
 ```
-@article{dreamnaacl2022,
-  title={DREAM: Improving Situational QA by First Elaborating the Situation},
-  author={Gu, Yuling and Dalvi Mishra, Bhavana, and Clark, Peter},
-  journal={NAACL},
-  year={2022}
+@inproceedings{gu-etal-2022-dream,
+    title = "{DREAM}: Improving Situational {QA} by First Elaborating the Situation",
+    author = "Gu, Yuling  and
+      Dalvi, Bhavana  and
+      Clark, Peter",
+    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jul,
+    year = "2022",
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.naacl-main.82",
+    doi = "10.18653/v1/2022.naacl-main.82",
+    pages = "1115--1127",
 }
 ```
 
