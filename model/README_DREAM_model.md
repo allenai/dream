@@ -10,6 +10,8 @@ $ beaker dataset fetch 01FMN19KY0SZQQHAG1JECDFVH4 -o dream_model_download
 ```
 (You may replace "dream_model_download" with a folder name of your preference. This is where the model will be downloaded to.)
 
+We also make the model available on HuggingFace: https://huggingface.co/allenai/DREAM. Feel free to skip the above download steps if you wish to load it from the Model Hub using code (see below, the second way of "Running the model").
+
 
 ## Install conda (if you don't have it)
 ```
@@ -28,13 +30,22 @@ $ python3.7 -m pip install -r requirements.txt
 ```
 
 ## Running the model
-Using the transformers library, you can then run the model as such in python:
+Using the transformers library, you can then load the model as such in python (if you downlaoded the model locally):
 
 ```
 >>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("/home/yulingg/dream_model_download") # can take a couple minutes, be patient!
 >>> tokenizer = AutoTokenizer.from_pretrained("t5-11b")
 ```
+
+Alternatively, you can also load it from the HuggingFace Model Hub using code:
+```
+>>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+>>> model = AutoModelForSeq2SeqLM.from_pretrained("allenai/DREAM") # NOTE: COMPARED TO ABOVE, THE ONLY DIFFERENCE IS IN THIS LINE
+>>> tokenizer = AutoTokenizer.from_pretrained("t5-11b")
+```
+
+
 
 Ex.1 (Rule of thumb dimension)
 ```
