@@ -5,7 +5,7 @@ This is the documentation on our suggestions as to how to run the models from ou
 ## Setup
 The setup required to run the models in this paper is the same as that for DREAM. Please refer the same instructions (https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md) for installing the requirements inside a conda environment.
 
-## Accessing the model
+## Accessing the models
 We make all models available on HuggingFace: 
 
 * https://huggingface.co/allenai/System1_FigLang2022
