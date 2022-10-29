@@ -10,15 +10,6 @@ This repository provides access to the data, code and model in our DREAM-series 
 By elaborating along key conceptual dimensions informed by cognitive science, story understanding and planning literature, our approach has shown to improve task performance on various tasks such as ETHICS, CODAH, Social IQA, and Figurate Language Understanding (FLUTE). Our approach is easily adaptable to other language models, and task-agnostic in format (e.g. QA or NLI) and domain (e.g. ethical decisions or figurative language understanding).
 
 
-# DREAM-FLUTE
-This repository provides access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD)
-
-## Data Processing:
-For details on how we make use of the training data provided in the FigLang2022 shared task, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/Process_Data_Train_Dev_split.ipynb.
-
-## Models:
-We made all models described in our paper available on the HuggingFace Model Hub. For links to the models, additional instructions about using the models and sample commands, please refer to to-add-link
-
 # DREAM
 
 This repository provides access to the data and model used in our paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/)
@@ -74,6 +65,15 @@ We also make the model available on HuggingFace:
 https://huggingface.co/allenai/DREAM
 
 For additional instructions about using the DREAM model and sample commands, please refer to https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md.
+
+# DREAM-FLUTE
+We provide access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD)
+
+## Data Processing:
+For details on how we make use of the training data provided in the FigLang2022 shared task, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/Process_Data_Train_Dev_split.ipynb.
+
+## Models:
+We made all models described in our paper available on the HuggingFace Model Hub. For links to the models, additional instructions about using the models and sample commands, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/README_DREAM_FLUTE_model.md.
 
 
 # Citations
