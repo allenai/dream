@@ -1,12 +1,12 @@
 # Downloading and running the DREAM-FLUTE models
 
-This is documentation on our suggestions as to how to run the models from our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD), where we acheved joint first position in the figurative language understanding shared task.
+This is the documentation on our suggestions as to how to run the models from our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD), where we acheived joint first position in the figurative language understanding shared task.
 
 ## Setup
-The setup required to run the DREAM-FLUTE is the same as that for DREAM. Please refer the same instructions (https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md) for installing the requirements inside a conda environment.
+The setup required to run the models in this paper is the same as that for DREAM. Please refer the same instructions (https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md) for installing the requirements inside a conda environment.
 
 ## Accessing the model
-We also make all models available on HuggingFace: 
+We make all models available on HuggingFace: 
 
 * https://huggingface.co/allenai/System1_FigLang2022
 * https://huggingface.co/allenai/System2_FigLang2022
@@ -32,6 +32,7 @@ input_string = "Premise: My neighbor actually purchased a dream car of mine and 
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+["Answer : Contradiction. Explanation : Most people would not be happy to see someone else's new car that they cannot afford because it is way out of their budget"]
 
 ```
 
@@ -46,6 +47,7 @@ input_string = "Premise: Yesterday two gangs were fighting just in front of my h
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Answer : [Type] Sarcasm [Label] Contradiction. Explanation : Seeing two gangs of people fighting in public can be really dangerous and scary, so someone who claims that they were not scared at all is being sarcastic.']
 
 ```
 
@@ -61,6 +63,7 @@ input_string = "Premise: we laid in the field of green grass and relaxed. [Premi
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Answer : Entailment. Explanation : Gold is a color that is associated with happiness, so the fields of gold are associated with happiness.']
 
 ```
 
@@ -74,6 +77,8 @@ input_string =  "Premise: After years of service and contribution to the company
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Answer : Contradiction. Explanation : To release someone means to let them go from a position, while to promote someone means to give them a higher position.']
+
 ```
 
 DREAM-FLUTE (consequence)
@@ -86,6 +91,8 @@ input_string = "Premise: My decision-making skills are not purely based on emoti
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+["Answer : Contradiction. Explanation : To have personal feelings color one's judgment means to make decisions based on them, but this context describes making decisions based on facts and not emotions"]
+
 ```
 
 DREAM-FLUTE (social norm)
@@ -98,6 +105,7 @@ input_string = "Premise: Sure ,he snorted just to make me feel even better about
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Answer : Contradiction. Explanation : To rub it in means to make someone feel bad about themselves, but in this sentence he is making the speaker feel better about the already great situation.']
 
 ```
 
@@ -111,6 +119,8 @@ input_string = "Premise: I was really looking forward to camping but now it is g
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Answer : Contradiction. Explanation : Camping in the rain is often associated with the prospect of getting wet and cold, so someone who is elated about it is not being rational.']
+
 ```
 
 ### System 4: Two-step System - Classify then explain
@@ -125,6 +135,8 @@ input_string = "Premise: After releasing his rage he was like a ferocious wolf. 
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Contradiction']
+
 ```
 
 
@@ -138,6 +150,8 @@ input_string = "Premise: It is wrong to lie to children. Hypothesis: Telling lie
 input_ids = tokenizer.encode(input_string, return_tensors="pt")
 output = model.generate(input_ids, max_length=200)
 tokenizer.batch_decode(output, skip_special_tokens=True)
+['Clipping the wings of a butterfly means that the butterfly will never be able to fly, so lying to children is like doing the same.']
+
 ```
 
 

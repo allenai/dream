@@ -2,9 +2,11 @@
 This repository provides access to the data, code and model in our DREAM-series of works. This is a line of research where we make use of scene elaboration for building a "mental model" of situation given in input text. The relevant papers in the DREAM-series are: 
 
 * DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/)
+
 (Refer to section "DREAM" below.)
 
 * Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD) (Joint first position in figurative language understanding shared task.)
+
 (Refer to section "DREAM-FLUTE" below.)
 
 By elaborating along key conceptual dimensions informed by cognitive science, story understanding and planning literature, our approach has shown to improve task performance on various tasks such as ETHICS, CODAH, Social IQA, and Figurate Language Understanding (FLUTE). Our approach is easily adaptable to other language models, and task-agnostic in format (e.g. QA or NLI) and domain (e.g. ethical decisions or figurative language understanding).
@@ -14,7 +16,7 @@ By elaborating along key conceptual dimensions informed by cognitive science, st
 
 This repository provides access to the data and model used in our paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/)
 
-## Dataset Creation:
+### Dataset Creation:
 The script to compile Scene Elaboration (SE) dataset from existing commonsense resources is provided in two formats. 
 
 (1) For the script in Jupyter Notebook format (.ipynb), follow the instructions in the Markdown to download the source data and run each cell in the notebook.
@@ -57,7 +59,7 @@ This script will compile Scene Elaboration dataset in the following folder:
 external_data_tidied_combined_used_to_train_DREAM
 ```
 
-## DREAM Model:
+### DREAM Model:
 Our T5-11B model is available in HuggingFace PyTorch format at:
 https://beaker.org/ds/01FMN19KY0SZQQHAG1JECDFVH4
 
@@ -69,10 +71,10 @@ For additional instructions about using the DREAM model and sample commands, ple
 # DREAM-FLUTE
 We provide access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD)
 
-## Data Processing:
+### Data Processing:
 For details on how we make use of the training data provided in the FigLang2022 shared task, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/Process_Data_Train_Dev_split.ipynb.
 
-## Models:
+### Models:
 We made all models described in our paper available on the HuggingFace Model Hub. For links to the models, additional instructions about using the models and sample commands, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/README_DREAM_FLUTE_model.md.
 
 
@@ -95,4 +97,5 @@ We made all models described in our paper available on the HuggingFace Model Hub
 
 Citation for DREAM-FLUTE coming soon! 
 ```
+
 
