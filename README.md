@@ -5,7 +5,7 @@ This repository provides access to the data, code and model in our DREAM-series 
 
 (Refer to section "DREAM" below.)
 
-* Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD) (Joint first position in figurative language understanding shared task.)
+* Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407) (Joint first position in figurative language understanding shared task.)
 
 (Refer to section "DREAM-FLUTE" below.)
 
@@ -69,7 +69,7 @@ https://huggingface.co/allenai/DREAM
 For additional instructions about using the DREAM model and sample commands, please refer to https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md.
 
 # DREAM-FLUTE
-We provide access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD)
+We provide access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407)
 
 ### Data Processing:
 For details on how we make use of the training data provided in the FigLang2022 shared task, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/Process_Data_Train_Dev_split.ipynb.
