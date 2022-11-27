@@ -1,11 +1,11 @@
-# The DREAM-series
-This repository provides access to the data, code and model in our DREAM-series of works. This is a line of research where we make use of scene elaboration for building a "mental model" of situation given in input text. The relevant papers in the DREAM-series are: 
+# The DREAM series
+This repository provides access to the data, code and model in our DREAM series of works. This is a line of research where we make use of scene elaboration for building a "mental model" of situation given in input text. The relevant papers in the DREAM series are: 
 
-* DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/)
+* DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/, Video: https://youtu.be/ynGuW57pnko)
 
 (Refer to section "DREAM" below.)
 
-* Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407) (Joint first position in figurative language understanding shared task.)
+* Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407, Video: https://youtu.be/gapJa67kaKc) (Joint first position in figurative language understanding shared task.)
 
 (Refer to section "DREAM-FLUTE" below.)
 
@@ -95,7 +95,14 @@ We made all models described in our paper available on the HuggingFace Model Hub
     pages = "1115--1127",
 }
 
-Citation for DREAM-FLUTE coming soon! 
+@misc{gu-etal-2022-dreamflute,
+    title = {Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE},
+    author = {Gu, Yuling and Fu, Yao and Pyatkin, Valentina and Magnusson, Ian and Mishra, Bhavana Dalvi and Clark, Peter},
+    year = {2022},
+    publisher = {arXiv},
+    url = {https://arxiv.org/abs/2210.16407},
+    doi = {10.48550/ARXIV.2210.16407},
+}
 ```
 
 

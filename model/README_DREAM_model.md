@@ -1,6 +1,6 @@
 # Downloading and running the DREAM model
 
-This is documentation on our suggestions as to how to run the model from our paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (https://arxiv.org/abs/2112.08656)
+This is documentation on our suggestions as to how to run the model from our paper DREAM: Improving Situational QA by First Elaborating the Situation, NAACL 2022 (Arxiv link: https://arxiv.org/abs/2112.08656, ACL Anthology link: https://aclanthology.org/2022.naacl-main.82/)
 
 
 ## Download the model
@@ -22,12 +22,13 @@ $ export PATH=/home/$USER/anaconda3/bin/:$PATH
 ```
 
 ## Create a conda environment
-Install the requirements inside a conda environment. The requirements.txt file can be found in this same folder as this README.
+You'll need to install PyTorch and Transformers to use the model. The following code snippet installs the requirements inside a conda environment. The requirements.txt file can be found in this same folder as this README.
 ```
 $ conda create -n dream python=3.7
 $ conda activate dream
 $ python3.7 -m pip install -r requirements.txt
 ```
+
 
 ## Running the model
 Using the transformers library, you can load the downloaded model as such in python (if you downloaded the model locally):
@@ -79,3 +80,6 @@ emotion
 rot
 consequence
 ```
+
+
+The code above has been tested with transformers==4.24.0 and torch==1.13.0.

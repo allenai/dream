@@ -1,9 +1,9 @@
 # Downloading and running the DREAM-FLUTE models
 
-This is the documentation on our suggestions as to how to run the models from our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: TBD), where we achieved joint first position in the figurative language understanding shared task.
+This is the documentation on our suggestions as to how to run the models from our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407), where we achieved joint first position in the figurative language understanding shared task.
 
 ## Setup
-The setup required to run the models in this paper is the same as that for DREAM. Please refer the same instructions (https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md) for installing the requirements inside a conda environment.
+The setup required to run the models in this paper is the same as that for DREAM. You'll need to install PyTorch and Transformers to use the models. Please refer the same instructions (https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md) for installing the requirements inside a conda environment.
 
 ## Accessing the models
 We make all models available on HuggingFace: 
@@ -155,4 +155,4 @@ tokenizer.batch_decode(output, skip_special_tokens=True)
 ```
 
 
-
+The code above has been tested with transformers==4.24.0 and torch==1.13.0.
