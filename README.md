@@ -5,7 +5,7 @@ This repository provides access to the data, code and model in our DREAM series 
 
 (Refer to section "DREAM" below.)
 
-* Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407, Video: https://youtu.be/gapJa67kaKc) (Joint first position in figurative language understanding shared task.)
+* Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407, ACL Anthology link: https://aclanthology.org/2022.flp-1.12/, Video: https://youtu.be/gapJa67kaKc) (Joint first position in figurative language understanding shared task.)
 
 (Refer to section "DREAM-FLUTE" below.)
 
@@ -69,7 +69,7 @@ https://huggingface.co/allenai/DREAM
 For additional instructions about using the DREAM model and sample commands, please refer to https://github.com/allenai/dream/blob/main/model/README_DREAM_model.md.
 
 # DREAM-FLUTE
-We provide access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407)
+We provide access to the code and models used in our paper Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE, FigLang workshop @ EMNLP 2022 (Arxiv link: https://arxiv.org/abs/2210.16407, ACL Anthology link: https://aclanthology.org/2022.flp-1.12/)
 
 ### Data Processing:
 For details on how we make use of the training data provided in the FigLang2022 shared task, please refer to https://github.com/allenai/dream/blob/main/FigLang2022SharedTask/Process_Data_Train_Dev_split.ipynb.
@@ -95,13 +95,28 @@ We made all models described in our paper available on the HuggingFace Model Hub
     pages = "1115--1127",
 }
 
-@misc{gu-etal-2022-dreamflute,
-    title = {Just-DREAM-about-it: Figurative Language Understanding with DREAM-FLUTE},
-    author = {Gu, Yuling and Fu, Yao and Pyatkin, Valentina and Magnusson, Ian and Mishra, Bhavana Dalvi and Clark, Peter},
-    year = {2022},
-    publisher = {arXiv},
-    url = {https://arxiv.org/abs/2210.16407},
-    doi = {10.48550/ARXIV.2210.16407},
+@inproceedings{gu-etal-2022-just,
+    title = "Just-{DREAM}-about-it: Figurative Language Understanding with {DREAM}-{FLUTE}",
+    author = "Gu, Yuling  and
+      Fu, Yao  and
+      Pyatkin, Valentina  and
+      Magnusson, Ian  and
+      Dalvi Mishra, Bhavana  and
+      Clark, Peter",
+    editor = "Ghosh, Debanjan  and
+      Beigman Klebanov, Beata  and
+      Muresan, Smaranda  and
+      Feldman, Anna  and
+      Poria, Soujanya  and
+      Chakrabarty, Tuhin",
+    booktitle = "Proceedings of the 3rd Workshop on Figurative Language Processing (FLP)",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates (Hybrid)",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.flp-1.12",
+    doi = "10.18653/v1/2022.flp-1.12",
+    pages = "84--93",
 }
 ```
 
